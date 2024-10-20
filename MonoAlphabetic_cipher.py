@@ -64,7 +64,7 @@ while cond  :
        option = int(input("Welcome to the monoalphapitic cipher to encrypt choose 1 \n to dcrypt choose 2 and to decline enter 0: "))
       
     except ValueError: 
-       option=input("Only intgers allowd (0, 1 ,2) : ")
+       option=int(input("Only intgers allowd (0, 1 ,2) : "))
     if option == 1 : 
         print(f"the encrypted txt is : {MonoEnc()}")
     elif(option== 2) : 
@@ -73,7 +73,4 @@ while cond  :
          cond = False
          print("\n----Bye---")
             
-            
-
-    
     
