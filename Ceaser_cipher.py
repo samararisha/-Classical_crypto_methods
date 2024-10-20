@@ -1,13 +1,10 @@
-option = int(input("to Encrypt enter 1 , to decrypt enter 2 : ").strip())
-while option not in range (1,3) : 
-   option = int(input("Wrong option 1 for encryption and 2 for dycription").strip())
 
 theAvalue = ord("a")
 
 def ceaserenc() : 
       plain = input("please enter the plain text : ").lower()
       try : 
-          key = int(input("please enter the number"))
+          key = int(input("please enter the key number: "))
       except ValueError :
           key = int(input("Only intgers are allowd: "))      
       cipher_list= []
@@ -30,7 +27,10 @@ def ceaserenc() :
 def ceaserdec() : 
     plain_list = []
     cipher_txt = input("enter the cipher txt : ").lower()
-    key = int(input("enter the key : "))
+    try : 
+        key = int(input("please enter the key number : "))
+    except ValueError :
+          key = int(input("Only intgers are allowd: "))    
     for letter in cipher_txt : 
        if letter == " " :
          plain_list.append(letter)
@@ -48,12 +48,25 @@ def ceaserdec() :
     plain_txt = "".join(plain_list)
     return plain_txt
  
+cond = True 
+while cond : 
+   try : 
+     option = int(input("to Encrypt enter 1 , to decrypt enter 2 and to decline 0: ").strip())
+   except  ValueError : 
+      option = int(input("Only these entgers allowd : 1 ,2 , 0").strip())
+   while option not in range(0 ,3):
+      option=int(input("invalid options only 1 , 2 0"))
+   if option == 1 : 
+      print(f"the encrypted message : {ceaserenc()}")
+   elif option == 2 :
+      print(f"the dycrpted meassage : {ceaserdec()}")
+   else : 
+      print("---Bye---")
+      cond =False
+
  
  
  
-if option == 1 : 
-   print(f"the encrypted message : {ceaserenc()}")
-if option == 2 :
-   print(f"the dycrpted meassage : {ceaserdec()}")
+
            
     
