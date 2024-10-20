@@ -55,20 +55,24 @@ def monodyc () :
     return "".join(plain).upper()       
         
         
-    
 
 
-try: 
-    option = int(input("Welcome to the monoalphapitic cipher \n to encrypt choose 1 \n to dcrypt choose 2: "))
-except ValueError: 
-    option=input("Only intgers allowd [1 ,2] : ")
-while option not in range(1 ,3) : 
-    option=int(input("ValueError: Please choose only 1 or 2: "))
-    
-if option == 1 : 
-    print(f"the encrypted txt is : {MonoEnc()}")
-else : 
-    print(f"the plain txt is : {monodyc()}")
+cond = True
+while cond  : 
+    try: 
+      
+       option = int(input("Welcome to the monoalphapitic cipher to encrypt choose 1 \n to dcrypt choose 2 and to decline enter 0: "))
+      
+    except ValueError: 
+       option=input("Only intgers allowd (0, 1 ,2) : ")
+    if option == 1 : 
+        print(f"the encrypted txt is : {MonoEnc()}")
+    elif(option== 2) : 
+         print(f"the plain txt is : {monodyc()}")
+    else  :
+         cond = False
+         print("\n----Bye---")
+            
             
 
     
