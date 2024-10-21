@@ -7,6 +7,9 @@
     <li><strong>Vigenère Cipher</strong></li>
     <li><strong>Monoalphabetic Cipher</strong></li>
     <li><strong>Hill Cipher</strong></li>
+    <li><strong>Play Fair cipher</strong></li>
+
+    
 </ul>
 
 <p>These implementations are ideal for learning and experimenting with basic cryptographic concepts and understanding how classical encryption techniques work.</p>
