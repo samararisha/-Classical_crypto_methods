@@ -4,7 +4,6 @@
 
 <ul>
     <li><strong>Caesar Cipher</strong></li>
-    <li><strong>Vigenère Cipher</strong></li>
     <li><strong>Monoalphabetic Cipher</strong></li>
     <li><strong>Hill Cipher</strong></li>
     <li><strong>Play Fair cipher</strong></li>
