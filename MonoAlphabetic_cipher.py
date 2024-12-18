@@ -16,7 +16,7 @@ def get_cipher_key (key) : #to complete the key after the user
     for letter in range (97,123) :
         if chr(letter) not in cipher_alpha  :
             cipher_alpha.append(chr(letter))
-    print("the key after auto completion : ","".join(cipher_alpha) , "\n")
+    
     return cipher_alpha
     
 def MonoEnc() : 
